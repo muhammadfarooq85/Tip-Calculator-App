@@ -12,7 +12,73 @@
 </head>
 
 <body>
-    <h1>Hello World!</h1>
+
+    <div class="main-container">
+        <div class="logo">
+            <img src="./assets/images/logo.svg" alt="logo">
+        </div>
+        <div class="tip-calculator-container">
+            <div class="tip-creator-container">
+                <div>
+                    <div class="bill-input-label">
+                        <h3>Bill</h3>
+                        <h4 id="billErrorMsg" style="color: red; display: none; ">Bill Can't be zero.</h4>
+                    </div>
+                    <div class="bill-input-container">
+                        <img src="./assets/images/icon-dollar.svg" alt="dollar-icon">
+                        <input type="number" id="input" name="bill" placeholder="0">
+                    </div>
+                </div>
+                <div class="select-tip-container">
+                    <div class="tip-input-label">
+                        <h3>Select Tip</h3>
+                        <h4 id="tipErrorMsg" style="color: red; display: none;">Tip percetnage Can't be zero.</h4>
+                    </div>
+                    <div class="tips-percentage-container">
+                        <button>5%</button>
+                        <button>10%</button>
+                        <button>15%</button>
+                        <button>20%</button>
+                        <button>25%</button>
+                        <input type="number" id="input" placeholder="Custom" class="customTipInput" />
+                    </div>
+                </div>
+                <div>
+                    <div class="person-input-label">
+                        <h3>Person</h3>
+                        <h4 id="personErrorMsg" style="color: red; display: none;">Person Can't be zero.</h4>
+                    </div>
+                    <div class="people-input-container">
+                        <img src="./assets/images/icon-person.svg" alt="person-icon">
+                        <input type="number" id="input" name="numberOfPeople" placeholder="0">
+                    </div>
+                </div>
+            </div>
+            <div class="tip-result-container">
+                <div class="tip-amount-container">
+                    <div class="tip-amount-txt-container">
+                        <h2>Tip Amount</h2>
+                        <h4>/ Person</h4>
+                    </div>
+                    <div class="tip-amount-value-container">
+                        <h2 id="tipPerPerson">$00</h2>
+                    </div>
+                </div>
+                <div class="total-amount-container">
+                        <div class="total-amount-txt-container">
+                            <h2>Total Amount</h2>
+                            <h4>/ person</h4>
+                        </div>
+                        <div class="total-amount-value-container">
+                            <h2 id="totalBillPerPerson">$00</h2>
+                        </div>
+                </div>
+                <div class="reset-btn-container">
+                    <button id="resetBtn">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Custom Js -->
     <script src="app.js"></script>
 </body>
