@@ -211,4 +211,9 @@ label {
   .tips-percentage-container {
     grid-template-columns: 1fr 1fr;
   }
+
+  .tip-input-label,.bill-input-label,.person-input-label{
+    flex-direction: column;
+    align-items: start;
+  }
 }
