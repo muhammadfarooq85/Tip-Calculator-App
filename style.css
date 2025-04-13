@@ -188,7 +188,7 @@ label {
 
 @media only screen and (max-width: 992px) {
   .tip-calculator-container {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     border-radius: 10px;
   }
 
