@@ -65,16 +65,19 @@ tipPercentageBtns.forEach((tipPercentageBtn) => {
 
 function calculateTip(bill, tipPercentage, person) {
   let totalTip = (tipPercentage / 100) * bill;
-  let tipPerPerson = Math.floor(totalTip / person);
-  let billPerPerson = Math.floor(bill / person);
-  let totalPerPerson = billPerPerson + tipPerPerson;
+  let tipPerPerson = (totalTip / person).toFixed(2);
+  let billPerPerson = (bill / person).toFixed(2);
+  let totalPerPerson = (
+    parseFloat(billPerPerson) + parseFloat(tipPerPerson)
+  ).toFixed(2);
+
   tipPerPersonEl.innerText = `$${tipPerPerson}`;
   totalBillPerPersonEl.innerText = `$${totalPerPerson}`;
 }
 
 document.getElementById("resetBtn").addEventListener("click", () => {
-  tipPerPersonEl.innerText = "$00";
-  totalBillPerPersonEl.innerText = "$00";
+  tipPerPersonEl.innerText = "$0.00";
+  totalBillPerPersonEl.innerText = "$0.00";
   allInputs[0].value = "";
   allInputs[1].value = "";
   allInputs[2].value = "";
